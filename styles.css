@@ -1,0 +1,498 @@
+/* Estilos generales */
+body {
+    font-family: 'Roboto', sans-serif;
+    background: linear-gradient(135deg, #ff9a9e, #fad0c4, #a1c4fd, #c2e9fb);
+    color: #333;
+    margin: 0;
+    padding: 0;
+    text-align: center;
+    overflow-x: hidden;
+}
+
+/* Botones de navegación */
+.tabs {
+    display: flex;
+    justify-content: center;
+    background: rgba(255, 255, 255, 0.8);
+    padding: 10px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    backdrop-filter: blur(10px);
+}
+
+.tab-button {
+    background: #ff6f61;
+    border: none;
+    padding: 10px 20px;
+    font-size: 1em;
+    color: white;
+    cursor: pointer;
+    margin: 0 5px;
+    border-radius: 5px;
+    transition: background 0.3s ease, transform 0.3s ease;
+}
+
+.tab-button:hover {
+    background: #ff3b2f;
+    transform: translateY(-3px);
+}
+
+.tab-button.active {
+    background: #ff3b2f;
+}
+
+/* Contenido de las pestañas */
+.tab-content {
+    display: none;
+    padding: 100px 20px;
+    min-height: 100vh;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.tab-content.active {
+    display: flex;
+}
+
+/* Carta de amor */
+#carta .carta-container {
+    max-width: 600px;
+    margin: 0 auto;
+    background: rgba(255, 255, 255, 0.9);
+    padding: 30px;
+    border-radius: 15px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+}
+
+.carta-texto {
+    font-size: 1.2em;
+    opacity: 0;
+    animation: fadeIn 2s forwards;
+    color: #333;
+}
+
+@keyframes fadeIn {
+    to {
+        opacity: 1;
+    }
+}
+
+.hidden {
+    display: none;
+}
+
+#reveal-button {
+    background: #ff6f61;
+    border: none;
+    padding: 10px 20px;
+    font-size: 1em;
+    color: white;
+    cursor: pointer;
+    margin-top: 20px;
+    border-radius: 5px;
+    transition: background 0.3s ease, transform 0.3s ease;
+}
+
+#reveal-button:hover {
+    background: #ff3b2f;
+    transform: translateY(-3px);
+}
+
+/* Razones por las que te amo */
+#razones .razones-lista {
+    list-style: none;
+    padding: 0;
+}
+
+#razones .razones-lista li {
+    font-size: 1.1em;
+    margin: 15px 0;
+    opacity: 0;
+    animation: fadeIn 2s forwards;
+    animation-delay: 1s;
+    background: rgba(255, 255, 255, 0.9);
+    padding: 10px;
+    border-radius: 5px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+
+@keyframes twinkle {
+    0%, 100% {
+        opacity: 1;
+    }
+    50% {
+        opacity: 0.5;
+    }
+}
+
+/* Regalos virtuales */
+#regalos .regalos-container {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.regalo {
+    position: relative;
+    width: 100px;
+    height: 100px;
+    cursor: pointer;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.regalo .caja {
+    width: 100%;
+    height: 70%;
+    background: #ff6f61;
+    border-radius: 10px;
+}
+
+.regalo .lazo {
+    width: 100%;
+    height: 30%;
+    background: #ff3b2f;
+    border-radius: 5px;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+.regalo:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 10px 20px rgba(255, 111, 97, 0.3);
+}
+
+/* Fotos de ustedes */
+.fotos-container {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    margin: 20px 0;
+}
+
+.foto {
+    width: 200px;
+    height: 200px;
+    border-radius: 15px;
+    margin: 10px;
+    object-fit: cover;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+}
+
+.foto:hover {
+    transform: scale(1.1);
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    h1 {
+        font-size: 2em;
+    }
+
+    .regalo {
+        width: 80px;
+        height: 80px;
+    }
+
+    .foto {
+        width: 150px;
+        height: 150px;
+    }
+}
+
+/* Carta de amor */
+.carta-container {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.sobre {
+    position: relative;
+    width: 300px;
+    height: 200px;
+    cursor: pointer;
+    perspective: 1000px;
+}
+
+.sobre-frontal, .sobre-trasero {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: #ffcccb; /* Rosado cremoso */
+    border-radius: 10px;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+}
+
+.sobre-frontal {
+    z-index: 2;
+    transform-origin: bottom;
+    transition: transform 0.5s ease;
+}
+
+.sobre-trasero {
+    z-index: 1;
+    transition: transform 0.5s ease;
+}
+
+.corazon {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 3em;
+    color: #ff6f61;
+}
+
+.hoja {
+    position: absolute;
+    top: -180px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 90%;
+    height: 90%;
+    background: white;
+    border-radius: 10px;
+    padding: 20px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    z-index: 4;
+    opacity: 0;
+    transition: opacity 0.5s ease, top 0.5s ease;
+}
+
+.hoja h1 {
+    font-family: 'Playfair Display', serif;
+    color: #ff6f61;
+    font-size: 2em;
+    margin-bottom: 10px;
+}
+
+.carta-texto {
+    font-size: 1em;
+    color: #333;
+    opacity: 0;
+    animation: fadeIn 2s forwards;
+}
+
+@keyframes fadeIn {
+    to {
+        opacity: 1;
+    }
+}
+
+.hidden {
+    display: none;
+}
+
+/* Animación de apertura */
+.sobre.abierto .sobre-frontal {
+    transform: rotateX(180deg);
+}
+
+.sobre.abierto .sobre-trasero {
+    transform: rotateX(180deg);
+}
+
+.sobre.abierto .hoja {
+    top: -180px;
+    opacity: 1;
+}
+
+#reveal-button {
+    background: #ff6f61;
+    border: none;
+    padding: 10px 20px;
+    font-size: 1em;
+    color: white;
+    cursor: pointer;
+    margin-top: 20px;
+    border-radius: 5px;
+    transition: background 0.3s ease, transform 0.3s ease;
+}
+
+#reveal-button:hover {
+    background: #ff3b2f;
+    transform: translateY(-3px);
+}
+/* Regalos virtuales */
+.regalos-container {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.regalo {
+    position: relative;
+    width: 100px;
+    height: 100px;
+    cursor: pointer;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.regalo .caja {
+    width: 100%;
+    height: 70%;
+    background: #ff6f61;
+    border-radius: 10px;
+    position: relative;
+    transition: transform 0.5s ease;
+}
+
+.regalo .lazo {
+    width: 100%;
+    height: 30%;
+    background: #ff3b2f;
+    border-radius: 5px;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+.hoja-regalo {
+    position: absolute;
+    top: -150px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 200px;
+    background: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    opacity: 0;
+    transition: opacity 0.5s ease, top 0.5s ease;
+    z-index: 10;
+}
+
+.hoja-regalo p {
+    font-size: 1em;
+    color: #333;
+    text-align: center;
+}
+
+.foto-regalo {
+    width: 100%;
+    border-radius: 10px;
+}
+
+/* Animación de apertura */
+.regalo.abierto .caja {
+    transform: rotateX(180deg);
+}
+
+.regalo.abierto .hoja-regalo {
+    top: -180px;
+    opacity: 1;
+}
+
+/* Regalos virtuales */
+.regalos-container {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.regalo {
+    position: relative;
+    width: 120px;
+    height: 120px;
+    cursor: pointer;
+    perspective: 1000px;
+}
+
+.caja {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    transform-style: preserve-3d;
+    transition: transform 0.5s ease;
+}
+
+.tapa {
+    position: absolute;
+    width: 100%;
+    height: 50%;
+    background: #ff6f61;
+    top: 0;
+    left: 0;
+    transform-origin: bottom;
+    transition: transform 0.5s ease;
+}
+
+.cuerpo {
+    position: absolute;
+    width: 100%;
+    height: 50%;
+    background: #ff6f61;
+    bottom: 0;
+    left: 0;
+}
+
+.lazo-horizontal {
+    position: absolute;
+    width: 100%;
+    height: 20px;
+    background: #ff3b2f;
+    top: 50%;
+    left: 0;
+    transform: translateY(-50%);
+}
+
+.lazo-vertical {
+    position: absolute;
+    width: 20px;
+    height: 100%;
+    background: #ff3b2f;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.hoja-regalo {
+    position: absolute;
+    top: -180px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 200px;
+    background: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    opacity: 0;
+    transition: opacity 0.5s ease, top 0.5s ease;
+    z-index: 10;
+}
+
+.hoja-regalo p {
+    font-size: 1em;
+    color: #333;
+    text-align: center;
+}
+
+.foto-regalo {
+    width: 100%;
+    border-radius: 10px;
+}
+
+/* Animación de apertura */
+.regalo.abierto .tapa {
+    transform: rotateX(-180deg);
+}
+
+.regalo.abierto .hoja-regalo {
+    top: -200px;
+    opacity: 1;
+}
+
+
+
+

@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Para K</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Roboto:wght@300;400&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Música de fondo -->
+    <audio id="background-music" autoplay loop>
+        <source src="music/Ed Sheeran - Perfect.mp3" type="audio/mpeg">
+        Tu navegador no soporta audio.
+    </audio>
+
+    <!-- Botones de navegación -->
+    <nav class="tabs">
+        <button class="tab-button active" data-tab="carta">Carta de Amor</button>
+        <button class="tab-button" data-tab="razones">Razones</button>
+        <button class="tab-button" data-tab="regalos">Regalos</button>
+        <button class="tab-button"onclick="window.location.href='razon.html'">OTRO...</button>
+    </nav>
+
+<!-- Sección 1: Carta de amor animada -->
+<section id="carta" class="tab-content active">
+    <div class="carta-container">
+        <div class="sobre" id="sobre">
+            <div class="sobre-frontal">
+                <div class="corazon">❤️</div>
+            </div>
+            <div class="sobre-trasero"></div>
+            <div class="hoja" id="hoja">
+                <h1>Para mi Niña</h1>
+                <p class="carta-texto">Hola mi vida,</p>
+                <p class="carta-texto">Quiero que sepas que...<br>eres el amor de mi vida, que desde que llegaste a mi vida te has convertido en una persona única que aprecio con todo mi corazón. <br>Día a día le doy gracias al cielo por permitirme encontrarte y que te enamoraras de mí. <br>Gracias por ser mi niñita pequeña , Te amo mucho con bastante mi chocolate blanco. <br>Feliz primer 14 de febrero juntosss.</p>
+            </div>
+        </div>
+        <button id="reveal-button">Abrir la carta</button>
+    </div>
+</section>
+    <!-- Sección 2: Razones por las que te amo -->
+    <section id="razones" class="tab-content">
+        <h2>Razones por las que te amo</h2>
+        <ul class="razones-lista">
+            <li>Eres</li>
+            <li>Una</li>
+            <li>Gata</li>
+            <li>Negra</li>
+            <li>JAJAJAJA</li>
+        </ul>
+    </section>
+
+<!-- Sección 4: Regalos virtuales -->
+<section id="regalos" class="tab-content">
+    <h2>Abre tus regalos</h2>
+    <div class="regalos-container">
+        <!-- Regalo 1 -->
+        <div class="regalo">
+            <div class="caja">
+                <div class="tapa"></div>
+                <div class="cuerpo"></div>
+                <div class="lazo-horizontal"></div>
+                <div class="lazo-vertical"></div>
+            </div>
+            <div class="hoja-regalo hidden">
+                <p>EY TÚ , deja de mencionar a la otra.</p>
+            </div>
+        </div>
+        <!-- Regalo 2 -->
+        <div class="regalo">
+            <div class="caja">
+                <div class="tapa"></div>
+                <div class="cuerpo"></div>
+                <div class="lazo-horizontal"></div>
+                <div class="lazo-vertical"></div>
+            </div>
+            <div class="hoja-regalo hidden">
+                <p>Eres lo mejor que me ha pasadoooo sigue así de cansonaa. Te amo con todo mi corazón.</p>
+            </div>
+        </div>
+        <!-- Regalo 3 (con foto) -->
+        <div class="regalo">
+            <div class="caja">
+                <div class="tapa"></div>
+                <div class="cuerpo"></div>
+                <div class="lazo-horizontal"></div>
+                <div class="lazo-vertical"></div>
+            </div>
+            <div class="hoja-regalo hidden">
+                <img src="fotos/ultimajuntos.jpeg" alt="Nuestra foto" class="foto-regalo">
+            </div>
+        </div>
+    </div>
+</section>
+    <!-- Fotos de ustedes -->
+    <div class="fotos-container">
+        <img src="fotos/1-beso.jpeg" alt="Nuestra foto 1" class="foto">
+        <img src="fotos/3sonrisa.jpeg" alt="Nuestra foto 2" class="foto">
+        <img src="fotos/2-beso.jpeg" alt="Nuestra foto 3" class="foto">
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

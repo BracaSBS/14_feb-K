@@ -1,0 +1,129 @@
+/* Estilos generales */
+body {
+    font-family: 'Poppins', sans-serif;
+    background-color: #FFF8F0; /* Color crema */
+    color: #5A4A42; /* Color marrón suave */
+    margin: 0;
+    padding: 0;
+    line-height: 1.6;
+}
+
+header {
+    text-align: center;
+    padding: 50px 20px;
+    background-color: #FFD1DC; /* Rosa pastel */
+    color: #5A4A42;
+    animation: fadeIn 2s ease-in-out;
+}
+
+header h1 {
+    font-size: 3rem;
+    margin: 0;
+}
+
+header p {
+    font-size: 1.2rem;
+    margin: 10px 0 0;
+}
+
+#razones {
+    padding: 40px 20px;
+    background-color: #FFF8F0;
+}
+
+.razones-container {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.razones-lista {
+    list-style-type: none;
+    padding: 0;
+}
+
+.razones-lista li {
+    background-color: #FFFFFF;
+    margin: 10px 0;
+    padding: 15px;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    animation: slideIn 0.5s ease-in-out;
+    opacity: 0;
+    transform: translateY(20px);
+    animation-fill-mode: forwards;
+}
+
+.razones-lista li:nth-child(odd) {
+    background-color: #FFE5E2; /* Rosa claro */
+}
+
+.razones-lista li:nth-child(even) {
+    background-color: #FFEDDA; /* Amarillo claro */
+}
+
+footer {
+    text-align: center;
+    padding: 20px;
+    background-color: #FFD1DC;
+    color: #5A4A42;
+    margin-top: 40px;
+}
+
+/* Animaciones */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes slideIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.back-button {
+    position: fixed; /* Fija el botón en la pantalla */
+    top: 20px;
+    left: 20px;
+    background-color: #FF6F61; /* Coral pastel */
+    color: #FFFFFF;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 25px;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    z-index: 1000; /* Asegura que esté por encima de otros elementos */
+}
+
+.back-button:hover {
+    background-color: #FF3B2F; /* Coral más oscuro al pasar el mouse */
+}
+
+.music-button {
+    position: fixed; /* Fija el botón en la pantalla */
+    top: 20px;
+    right: 20px;
+    background-color: #FF6F61; /* Coral pastel */
+    color: #FFFFFF;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 25px;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    z-index: 1000; /* Asegura que esté por encima de otros elementos */
+}
+
+.music-button:hover {
+    background-color: #FF3B2F; /* Coral más oscuro al pasar el mouse */
+}
